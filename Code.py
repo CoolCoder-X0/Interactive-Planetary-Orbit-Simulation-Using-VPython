@@ -32,7 +32,7 @@ G = 1
 M = 10
 
 # Display the force formula in the UI
-scene.append_to_caption('Gravitational Force Formula: F = -G * M * r / |r|^3\n')
+scene.append_to_caption('Gravitational Force Formula: F = -G * M * m / r^2\n')
 
 # UI for parameter input
 scene.append_to_caption('\nPlanet Initial Position (x, y): ')
