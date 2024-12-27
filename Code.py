@@ -1,4 +1,4 @@
-from vpython import sphere, vector, rate, color, mag, winput, button, scene, textures, graph, gcurve
+from vpython import sphere, vector, rate, color, mag, winput, button, scene, textures, graph, gcurve, label
 
 # Function to update simulation parameters and restart the simulation
 def update_parameters():
@@ -59,6 +59,9 @@ button(text='Update Parameters', bind=update_parameters)
 ke_distance_graph = graph(title='Kinetic Energy vs Distance', xtitle='Distance', ytitle='Kinetic Energy', width=600, height=400)
 ke_distance_curve = gcurve(graph=ke_distance_graph, color=color.red)
 
+# Label to display escape velocity
+escape_velocity_label = label(pos=vector(0, -3, 0), text='Escape Velocity: ', box=False, height=10, color=color.white)
+
 # Simulation loop
 while True:
     rate(100)  # Limit the animation to 100 frames per second
@@ -76,3 +79,7 @@ while True:
 
     # Plot kinetic energy against the distance from the sun
     ke_distance_curve.plot(mag(r), kinetic_energy)
+
+    # Calculate and display the escape velocity
+    escape_velocity = (2 * G * M / mag(r))**0.5
+    escape_velocity_label.text = f'Escape Velocity: {escape_velocity:.2f}'
