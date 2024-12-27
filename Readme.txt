@@ -33,6 +33,7 @@ Insights
 - The simulation provides a practical demonstration of Newton's law of universal gravitation.
 - Users can explore the sensitivity of orbital dynamics to initial conditions and physical constants.
 - The real-time graph offers insights into the relationship between kinetic energy and orbital distance, illustrating concepts like conservation of energy.
+- The escape velocity feature helps users understand the minimum velocity required for the planet to escape the gravitational pull of the sun.
 
 Educational Value
 This project serves as an educational tool for students and enthusiasts to visualize and experiment with gravitational forces and orbital mechanics. It enhances understanding through interactive exploration and real-time feedback.
